@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BDC344F-E1ED-4D10-964D-D9F618A145DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HCM.WebApp</RootNamespace>
+    <AssemblyName>HCM.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Login0.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\FollowUpMessage.aspx" />
+    <Content Include="Admin\StateList.aspx" />
+    <Content Include="Admin\CityList.aspx" />
+    <Content Include="Admin\ServiceCategoryList.aspx" />
+    <Content Include="Admin\UniversityList.aspx" />
+    <Content Include="Admin\StateMang.aspx" />
+    <Content Include="Admin\CityMang.aspx" />
+    <Content Include="Admin\ServiceCategoryMang.aspx" />
+    <Content Include="Admin\UniversityMang.aspx" />
+    <Content Include="Admin\ManageAccount.aspx" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\bootstrapFlatly.rtl.css" />
+    <Content Include="Content\fancybox\blank.gif" />
+    <Content Include="Content\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Content\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Content\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Content\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Content\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Content\fancybox\jquery.fancybox.css" />
+    <Content Include="Content\fonts\DroidKufi\EARLY_ACCESS.html" />
+    <Content Include="Content\fonts\DroidKufi\LICENSE.txt" />
+    <Content Include="Content\fonts\DroidKufi\VERSION.txt" />
+    <Content Include="Content\img\ssac.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\prettyPhoto\prettyPhoto.css" />
+    <Content Include="DAL\Entity\HajjCrawdsMngModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HajjCrawdsMngModel.edmx</DependentUpon>
+      <LastGenOutput>HajjCrawdsMngModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Entity\HajjCrawdsMngModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HajjCrawdsMngModel.edmx</DependentUpon>
+      <LastGenOutput>HajjCrawdsMngModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="DetailsImages\1\3.jpg" />
+    <Content Include="DetailsImages\4\1.png" />
+    <Content Include="DetailsImages\5\5.jpg" />
+    <Content Include="DetailsImages\5\5.png" />
+    <Content Include="Navigation.aspx" />
+    <Content Include="Notification.aspx" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.3.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-migrate-3.0.0.js" />
+    <Content Include="Scripts\jquery-migrate-3.0.0.min.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.mousewheel.pack.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="ChangeLanguage.aspx" />
+    <Content Include="Content\img\googleMaps.png" />
+    <Content Include="Msg.aspx" />
+    <Content Include="Security\NotificationList.aspx" />
+    <Content Include="Security\NotificationMang.aspx" />
+    <Content Include="Security\CP.aspx" />
+    <Content Include="SSAInfo.aspx" />
+    <Content Include="Associations.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapFlatly.css" />
+    <Content Include="Content\bootstrapFlatly.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\_bootswatch.scss" />
+    <Content Include="Content\_variables.scss" />
+    <Content Include="App_Themes\SSACTheme\SSACSkin.skin" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="DetailsFiles\4\3.pdf" />
+    <Content Include="DetailsFiles\1\6.pdf" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Bold.arabic" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Bold.menu" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Bold.ttf" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Bold.woff" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Regular %281%29.menu" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Regular.arabic" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Regular.menu" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Regular.ttf" />
+    <Content Include="Content\fonts\DroidKufi\DroidKufi-Regular.woff" />
+    <Content Include="Content\fonts\DroidKufi\EARLY_ACCESS.family" />
+    <Content Include="Content\fonts\DroidKufi\menusubset-kufi.ff" />
+    <EntityDeploy Include="DAL\Entity\HajjCrawdsMngModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HajjCrawdsMngModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\Entity\HajjCrawdsMngModel.edmx.diagram">
+      <DependentUpon>HajjCrawdsMngModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\SSACPublish.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="SSA\ServiceDetailsList.aspx" />
+    <Content Include="SSA\ServiceInfoList.aspx" />
+    <Content Include="SSA\FAQList.aspx" />
+    <Content Include="SSA\ServiceDetailsMang.aspx" />
+    <Content Include="SSA\ServiceInfoMang.aspx" />
+    <Content Include="SSA\SSAAdmin.aspx" />
+    <Content Include="SSA\SSAProfile.aspx" />
+    <Content Include="SSA\FAQMang.aspx" />
+    <Content Include="UC\ucSendMsg.ascx" />
+    <Content Include="UC\ucLocationsMap.ascx" />
+    <Content Include="UC\Explorer.ascx" />
+    <Content Include="UC\ucAlertMessage.ascx" />
+    <Content Include="UC\ucLocation.ascx" />
+    <Content Include="UC\ucServiceDetails.ascx" />
+    <Content Include="UC\ucServiceInfo.ascx" />
+    <Content Include="UC\ucFAQ.ascx" />
+    <Content Include="UC\ucSSAList.ascx" />
+    <Content Include="UC\ucSSA.ascx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login0.aspx.cs">
+      <DependentUpon>Login0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login0.aspx.designer.cs">
+      <DependentUpon>Login0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FollowUpMessage.aspx.cs">
+      <DependentUpon>FollowUpMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FollowUpMessage.aspx.designer.cs">
+      <DependentUpon>FollowUpMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\StateList.aspx.cs">
+      <DependentUpon>StateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\StateList.aspx.designer.cs">
+      <DependentUpon>StateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CityList.aspx.cs">
+      <DependentUpon>CityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CityList.aspx.designer.cs">
+      <DependentUpon>CityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ServiceCategoryList.aspx.cs">
+      <DependentUpon>ServiceCategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ServiceCategoryList.aspx.designer.cs">
+      <DependentUpon>ServiceCategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UniversityList.aspx.cs">
+      <DependentUpon>UniversityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UniversityList.aspx.designer.cs">
+      <DependentUpon>UniversityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\StateMang.aspx.cs">
+      <DependentUpon>StateMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\StateMang.aspx.designer.cs">
+      <DependentUpon>StateMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CityMang.aspx.cs">
+      <DependentUpon>CityMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CityMang.aspx.designer.cs">
+      <DependentUpon>CityMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ServiceCategoryMang.aspx.cs">
+      <DependentUpon>ServiceCategoryMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ServiceCategoryMang.aspx.designer.cs">
+      <DependentUpon>ServiceCategoryMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UniversityMang.aspx.cs">
+      <DependentUpon>UniversityMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UniversityMang.aspx.designer.cs">
+      <DependentUpon>UniversityMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAccount.aspx.cs">
+      <DependentUpon>ManageAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAccount.aspx.designer.cs">
+      <DependentUpon>ManageAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\HCMResource.ar.designer.cs">
+      <DependentUpon>HCMResource.ar.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\HCMResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCMResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BLL\Manager\MessageManager.cs" />
+    <Compile Include="BLL\Manager\NotificationManager.cs" />
+    <Compile Include="BLL\Manager\NotificationLevelManager.cs" />
+    <Compile Include="BLL\Manager\UserTypeManager.cs" />
+    <Compile Include="DAL\Entity\AspNetRole.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\AspNetUser.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\AspNetUserClaim.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\AspNetUserLogin.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\City.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\C__MigrationHistory.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\FAQ.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\HajjCrawdsMngModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HajjCrawdsMngModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\HajjCrawdsMngModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\HajjCrawdsMngModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HajjCrawdsMngModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\InfoType.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\Location.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\Log.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\Message.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\MessageType.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\Notification.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\NotificationLevel.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\Rating.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\SaudiStudentAssociation.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\ServiceCategory.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\ServiceDetail.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\ServiceInformation.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\State.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\sysdiagram.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\University.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Entity\UserType.cs">
+      <DependentUpon>HajjCrawdsMngModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Repository\MessageRepository.cs" />
+    <Compile Include="DAL\Repository\NotificationRepository.cs" />
+    <Compile Include="DAL\Repository\NotificationLevelRepository.cs" />
+    <Compile Include="DAL\Repository\UsreTypeRepository.cs" />
+    <Compile Include="Navigation.aspx.cs">
+      <DependentUpon>Navigation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Navigation.aspx.designer.cs">
+      <DependentUpon>Navigation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.aspx.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notification.aspx.designer.cs">
+      <DependentUpon>Notification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Base\UserControlCommon.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\Manager\UserManager.cs" />
+    <Compile Include="ChangeLanguage.aspx.cs">
+      <DependentUpon>ChangeLanguage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeLanguage.aspx.designer.cs">
+      <DependentUpon>ChangeLanguage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Repository\UserRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Msg.aspx.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Msg.aspx.designer.cs">
+      <DependentUpon>Msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\NotificationList.aspx.cs">
+      <DependentUpon>NotificationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\NotificationList.aspx.designer.cs">
+      <DependentUpon>NotificationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\NotificationMang.aspx.cs">
+      <DependentUpon>NotificationMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\NotificationMang.aspx.designer.cs">
+      <DependentUpon>NotificationMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\CP.aspx.cs">
+      <DependentUpon>CP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\CP.aspx.designer.cs">
+      <DependentUpon>CP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSAInfo.aspx.cs">
+      <DependentUpon>SSAInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSAInfo.aspx.designer.cs">
+      <DependentUpon>SSAInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Associations.aspx.cs">
+      <DependentUpon>Associations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Associations.aspx.designer.cs">
+      <DependentUpon>Associations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Base\Common.cs" />
+    <Compile Include="BLL\Base\PageCommon.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\Manager\ServiceDetailsManager.cs" />
+    <Compile Include="BLL\Manager\ServiceCategoryManager.cs" />
+    <Compile Include="BLL\Manager\StateManager.cs" />
+    <Compile Include="BLL\Manager\UniversityManager.cs" />
+    <Compile Include="BLL\Manager\CityManager.cs" />
+    <Compile Include="BLL\Manager\SSAManager.cs" />
+    <Compile Include="BLL\Manager\ServiceInfoManager.cs" />
+    <Compile Include="BLL\Manager\FQAManager.cs" />
+    <Compile Include="BLL\Manager\LogManager.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Repository\ServiceDetailsRepository.cs" />
+    <Compile Include="DAL\Repository\ServiceInfoRepository.cs" />
+    <Compile Include="DAL\Repository\ServiceCategoryRepository.cs" />
+    <Compile Include="DAL\Repository\UniversityRepository.cs" />
+    <Compile Include="DAL\Repository\StateRepository.cs" />
+    <Compile Include="DAL\Repository\CityRepository.cs" />
+    <Compile Include="DAL\Repository\SSARepository.cs" />
+    <Compile Include="DAL\Repository\FAQRepository.cs" />
+    <Compile Include="DAL\Repository\LogRepository.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\ServiceDetailsList.aspx.cs">
+      <DependentUpon>ServiceDetailsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\ServiceDetailsList.aspx.designer.cs">
+      <DependentUpon>ServiceDetailsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\ServiceInfoList.aspx.cs">
+      <DependentUpon>ServiceInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\ServiceInfoList.aspx.designer.cs">
+      <DependentUpon>ServiceInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\FAQList.aspx.cs">
+      <DependentUpon>FAQList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\FAQList.aspx.designer.cs">
+      <DependentUpon>FAQList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\ServiceDetailsMang.aspx.cs">
+      <DependentUpon>ServiceDetailsMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\ServiceDetailsMang.aspx.designer.cs">
+      <DependentUpon>ServiceDetailsMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\ServiceInfoMang.aspx.cs">
+      <DependentUpon>ServiceInfoMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\ServiceInfoMang.aspx.designer.cs">
+      <DependentUpon>ServiceInfoMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\SSAAdmin.aspx.cs">
+      <DependentUpon>SSAAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\SSAAdmin.aspx.designer.cs">
+      <DependentUpon>SSAAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\SSAProfile.aspx.cs">
+      <DependentUpon>SSAProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\SSAProfile.aspx.designer.cs">
+      <DependentUpon>SSAProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SSA\FAQMang.aspx.cs">
+      <DependentUpon>FAQMang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SSA\FAQMang.aspx.designer.cs">
+      <DependentUpon>FAQMang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="UC\ucSendMsg.ascx.cs">
+      <DependentUpon>ucSendMsg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucSendMsg.ascx.designer.cs">
+      <DependentUpon>ucSendMsg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLocationsMap.ascx.cs">
+      <DependentUpon>ucLocationsMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucLocationsMap.ascx.designer.cs">
+      <DependentUpon>ucLocationsMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Explorer.ascx.cs">
+      <DependentUpon>Explorer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\Explorer.ascx.designer.cs">
+      <DependentUpon>Explorer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucAlertMessage.ascx.cs">
+      <DependentUpon>ucAlertMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucAlertMessage.ascx.designer.cs">
+      <DependentUpon>ucAlertMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLocation.ascx.cs">
+      <DependentUpon>ucLocation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucLocation.ascx.designer.cs">
+      <DependentUpon>ucLocation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucServiceDetails.ascx.cs">
+      <DependentUpon>ucServiceDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucServiceDetails.ascx.designer.cs">
+      <DependentUpon>ucServiceDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucServiceInfo.ascx.cs">
+      <DependentUpon>ucServiceInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucServiceInfo.ascx.designer.cs">
+      <DependentUpon>ucServiceInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucFAQ.ascx.cs">
+      <DependentUpon>ucFAQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucFAQ.ascx.designer.cs">
+      <DependentUpon>ucFAQ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSSAList.ascx.cs">
+      <DependentUpon>ucSSAList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucSSAList.ascx.designer.cs">
+      <DependentUpon>ucSSAList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSSA.ascx.cs">
+      <DependentUpon>ucSSA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucSSA.ascx.designer.cs">
+      <DependentUpon>ucSSA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\HCMResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>HCMResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\HCMResource.ar.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>HCMResource.ar.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54613</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54613/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://web3.murraystate.edu/asp/dalfaia/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HCM.WebApp.DAL.Entity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="256" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="10" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="UniversityId" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="StateId" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaudiStudentAssociationId" Type="int" />
+          <Property Name="Question" Type="nvarchar" MaxLength="256" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="InfoType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameAr" Type="nvarchar" MaxLength="256" />
+          <Property Name="NameEn" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Host" Type="nvarchar" MaxLength="50" />
+          <Property Name="Origin" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MessageTypeId" Type="int" />
+          <Property Name="MessageText" Type="nvarchar(max)" />
+          <Property Name="SenderId" Type="nvarchar" MaxLength="256" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="256" />
+          <Property Name="SenderEmail" Type="nvarchar" MaxLength="256" />
+          <Property Name="SenderMobile" Type="nvarchar" MaxLength="256" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="MessageType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="NotificationLevelId" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="256" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="256" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="NotificationLevel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameAr" Type="nvarchar" MaxLength="256" />
+          <Property Name="NameEn" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Rating">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaudiStudentAssociationId" Type="int" />
+          <Property Name="RatingValue" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="SaudiStudentAssociation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="UniversityId" Type="int" />
+          <Property Name="StateId" Type="int" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="ZipCode" Type="int" />
+          <Property Name="Street" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Website" Type="nvarchar" MaxLength="50" />
+          <Property Name="SocialInfo" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdministratorId" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServiceCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServiceDetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceInformationId" Type="int" />
+          <Property Name="InfoTypeId" Type="int" />
+          <Property Name="InformationContent" Type="nvarchar" MaxLength="256" />
+          <Property Name="FileExt" Type="nchar" MaxLength="10" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServiceInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaudiStudentAssociationId" Type="int" />
+          <Property Name="ServiceCategoryId" Type="int" />
+          <Property Name="Title" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Section" Type="nvarchar" MaxLength="256" />
+          <Property Name="Address" Type="nvarchar" MaxLength="256" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="256" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="Abbr" Type="nchar" MaxLength="10" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="256" />
+          <Property Name="LastUpdatedDate" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameAr" Type="nvarchar" MaxLength="256" />
+          <Property Name="NameEn" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <Association Name="FK_AspNetUsers_University">
+          <End Role="University" Type="Self.University" Multiplicity="0..1" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUsers">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUsers_UserType">
+          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUsers">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQ_SaudiStudentAssociation">
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Role="FAQ" Type="Self.FAQ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FAQ">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_InformationCategory">
+          <End Role="ServiceCategory" Type="Self.ServiceCategory" Multiplicity="0..1" />
+          <End Role="ServiceInformation" Type="Self.ServiceInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceInformation">
+              <PropertyRef Name="ServiceCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_SaudiStudentAssociation">
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Role="ServiceInformation" Type="Self.ServiceInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceInformation">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformationDetails_Information">
+          <End Role="ServiceInformation" Type="Self.ServiceInformation" Multiplicity="0..1" />
+          <End Role="ServiceDetails" Type="Self.ServiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceDetails">
+              <PropertyRef Name="ServiceInformationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageType">
+          <End Role="MessageType" Type="Self.MessageType" Multiplicity="0..1" />
+          <End Role="Message" Type="Self.Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_NotificationLevel">
+          <End Role="NotificationLevel" Type="Self.NotificationLevel" Multiplicity="0..1" />
+          <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NotificationLevel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="NotificationLevelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_UserType">
+          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
+          <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rating_SaudiStudentAssociation">
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Role="Rating" Type="Self.Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rating">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_City">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_State">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_University">
+          <End Role="University" Type="Self.University" Multiplicity="0..1" />
+          <End Role="SaudiStudentAssociation" Type="Self.SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceDetails_InfoType">
+          <End Role="InfoType" Type="Self.InfoType" Multiplicity="0..1" />
+          <End Role="ServiceDetails" Type="Self.ServiceDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InfoType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceDetails">
+              <PropertyRef Name="InfoTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HCMWebAppDALEntityStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InfoType" EntityType="Self.InfoType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MessageType" EntityType="Self.MessageType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NotificationLevel" EntityType="Self.NotificationLevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SaudiStudentAssociation" EntityType="Self.SaudiStudentAssociation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceCategory" EntityType="Self.ServiceCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceDetails" EntityType="Self.ServiceDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceInformation" EntityType="Self.ServiceInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="University" EntityType="Self.University" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AspNetUsers_University" Association="Self.FK_AspNetUsers_University">
+            <End Role="University" EntitySet="University" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUsers_UserType" Association="Self.FK_AspNetUsers_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="Self.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQ_SaudiStudentAssociation" Association="Self.FK_FAQ_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+            <End Role="FAQ" EntitySet="FAQ" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_InformationCategory" Association="Self.FK_Information_InformationCategory">
+            <End Role="ServiceCategory" EntitySet="ServiceCategory" />
+            <End Role="ServiceInformation" EntitySet="ServiceInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_SaudiStudentAssociation" Association="Self.FK_Information_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+            <End Role="ServiceInformation" EntitySet="ServiceInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformationDetails_Information" Association="Self.FK_InformationDetails_Information">
+            <End Role="ServiceInformation" EntitySet="ServiceInformation" />
+            <End Role="ServiceDetails" EntitySet="ServiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageType" Association="Self.FK_Message_MessageType">
+            <End Role="MessageType" EntitySet="MessageType" />
+            <End Role="Message" EntitySet="Message" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_NotificationLevel" Association="Self.FK_Notification_NotificationLevel">
+            <End Role="NotificationLevel" EntitySet="NotificationLevel" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_UserType" Association="Self.FK_Notification_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="Notification" EntitySet="Notification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rating_SaudiStudentAssociation" Association="Self.FK_Rating_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+            <End Role="Rating" EntitySet="Rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_City" Association="Self.FK_SaudiStudentAssociation_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_State" Association="Self.FK_SaudiStudentAssociation_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_University" Association="Self.FK_SaudiStudentAssociation_University">
+            <End Role="University" EntitySet="University" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceDetails_InfoType" Association="Self.FK_ServiceDetails_InfoType">
+            <End Role="InfoType" EntitySet="InfoType" />
+            <End Role="ServiceDetails" EntitySet="ServiceDetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HCM.WebApp.DAL.Entity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HajjCrawdsMngEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="HCM.WebApp.DAL.Entity.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="HCM.WebApp.DAL.Entity.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="HCM.WebApp.DAL.Entity.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="HCM.WebApp.DAL.Entity.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="HCM.WebApp.DAL.Entity.AspNetUser" />
+          <EntitySet Name="Cities" EntityType="HCM.WebApp.DAL.Entity.City" />
+          <EntitySet Name="FAQs" EntityType="HCM.WebApp.DAL.Entity.FAQ" />
+          <EntitySet Name="InfoTypes" EntityType="HCM.WebApp.DAL.Entity.InfoType" />
+          <EntitySet Name="Locations" EntityType="HCM.WebApp.DAL.Entity.Location" />
+          <EntitySet Name="Logs" EntityType="HCM.WebApp.DAL.Entity.Log" />
+          <EntitySet Name="Messages" EntityType="HCM.WebApp.DAL.Entity.Message" />
+          <EntitySet Name="MessageTypes" EntityType="HCM.WebApp.DAL.Entity.MessageType" />
+          <EntitySet Name="Notifications" EntityType="HCM.WebApp.DAL.Entity.Notification" />
+          <EntitySet Name="NotificationLevels" EntityType="HCM.WebApp.DAL.Entity.NotificationLevel" />
+          <EntitySet Name="Ratings" EntityType="HCM.WebApp.DAL.Entity.Rating" />
+          <EntitySet Name="SaudiStudentAssociations" EntityType="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" />
+          <EntitySet Name="ServiceCategories" EntityType="HCM.WebApp.DAL.Entity.ServiceCategory" />
+          <EntitySet Name="ServiceDetails" EntityType="HCM.WebApp.DAL.Entity.ServiceDetail" />
+          <EntitySet Name="ServiceInformations" EntityType="HCM.WebApp.DAL.Entity.ServiceInformation" />
+          <EntitySet Name="States" EntityType="HCM.WebApp.DAL.Entity.State" />
+          <EntitySet Name="sysdiagrams" EntityType="HCM.WebApp.DAL.Entity.sysdiagram" />
+          <EntitySet Name="Universities" EntityType="HCM.WebApp.DAL.Entity.University" />
+          <EntitySet Name="UserTypes" EntityType="HCM.WebApp.DAL.Entity.UserType" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUsers_University" Association="HCM.WebApp.DAL.Entity.FK_AspNetUsers_University">
+            <End Role="University" EntitySet="Universities" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUsers_UserType" Association="HCM.WebApp.DAL.Entity.FK_AspNetUsers_UserType">
+            <End Role="UserType" EntitySet="UserTypes" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="HCM.WebApp.DAL.Entity.FK_City_State">
+            <End Role="State" EntitySet="States" />
+            <End Role="City" EntitySet="Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_City" Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_City">
+            <End Role="City" EntitySet="Cities" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FAQ_SaudiStudentAssociation" Association="HCM.WebApp.DAL.Entity.FK_FAQ_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+            <End Role="FAQ" EntitySet="FAQs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceDetails_InfoType" Association="HCM.WebApp.DAL.Entity.FK_ServiceDetails_InfoType">
+            <End Role="InfoType" EntitySet="InfoTypes" />
+            <End Role="ServiceDetail" EntitySet="ServiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Message_MessageType" Association="HCM.WebApp.DAL.Entity.FK_Message_MessageType">
+            <End Role="MessageType" EntitySet="MessageTypes" />
+            <End Role="Message" EntitySet="Messages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_NotificationLevel" Association="HCM.WebApp.DAL.Entity.FK_Notification_NotificationLevel">
+            <End Role="NotificationLevel" EntitySet="NotificationLevels" />
+            <End Role="Notification" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notification_UserType" Association="HCM.WebApp.DAL.Entity.FK_Notification_UserType">
+            <End Role="UserType" EntitySet="UserTypes" />
+            <End Role="Notification" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rating_SaudiStudentAssociation" Association="HCM.WebApp.DAL.Entity.FK_Rating_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+            <End Role="Rating" EntitySet="Ratings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_SaudiStudentAssociation" Association="HCM.WebApp.DAL.Entity.FK_Information_SaudiStudentAssociation">
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+            <End Role="ServiceInformation" EntitySet="ServiceInformations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_State" Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_State">
+            <End Role="State" EntitySet="States" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SaudiStudentAssociation_University" Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_University">
+            <End Role="University" EntitySet="Universities" />
+            <End Role="SaudiStudentAssociation" EntitySet="SaudiStudentAssociations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Information_InformationCategory" Association="HCM.WebApp.DAL.Entity.FK_Information_InformationCategory">
+            <End Role="ServiceCategory" EntitySet="ServiceCategories" />
+            <End Role="ServiceInformation" EntitySet="ServiceInformations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InformationDetails_Information" Association="HCM.WebApp.DAL.Entity.FK_InformationDetails_Information">
+            <End Role="ServiceInformation" EntitySet="ServiceInformations" />
+            <End Role="ServiceDetail" EntitySet="ServiceDetails" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="HCM.WebApp.DAL.Entity.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="HCM.WebApp.DAL.Entity.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UserTypeId" Type="Int32" />
+          <Property Name="UniversityId" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="University" Relationship="HCM.WebApp.DAL.Entity.FK_AspNetUsers_University" FromRole="AspNetUser" ToRole="University" />
+          <NavigationProperty Name="UserType" Relationship="HCM.WebApp.DAL.Entity.FK_AspNetUsers_UserType" FromRole="AspNetUser" ToRole="UserType" />
+          <NavigationProperty Name="AspNetRoles" Relationship="HCM.WebApp.DAL.Entity.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="StateId" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="State" Relationship="HCM.WebApp.DAL.Entity.FK_City_State" FromRole="City" ToRole="State" />
+          <NavigationProperty Name="SaudiStudentAssociations" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_City" FromRole="City" ToRole="SaudiStudentAssociation" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaudiStudentAssociationId" Type="Int32" />
+          <Property Name="Question" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Answer" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="SaudiStudentAssociation" Relationship="HCM.WebApp.DAL.Entity.FK_FAQ_SaudiStudentAssociation" FromRole="FAQ" ToRole="SaudiStudentAssociation" />
+        </EntityType>
+        <EntityType Name="InfoType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServiceDetails" Relationship="HCM.WebApp.DAL.Entity.FK_ServiceDetails_InfoType" FromRole="InfoType" ToRole="ServiceDetail" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameAr" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="NameEn" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Host" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Origin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MessageTypeId" Type="Int32" />
+          <Property Name="MessageText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SenderId" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SenderName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SenderEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="SenderMobile" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="MessageType" Relationship="HCM.WebApp.DAL.Entity.FK_Message_MessageType" FromRole="Message" ToRole="MessageType" />
+        </EntityType>
+        <EntityType Name="MessageType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Messages" Relationship="HCM.WebApp.DAL.Entity.FK_Message_MessageType" FromRole="MessageType" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="Int32" />
+          <Property Name="NotificationLevelId" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="NotificationLevel" Relationship="HCM.WebApp.DAL.Entity.FK_Notification_NotificationLevel" FromRole="Notification" ToRole="NotificationLevel" />
+          <NavigationProperty Name="UserType" Relationship="HCM.WebApp.DAL.Entity.FK_Notification_UserType" FromRole="Notification" ToRole="UserType" />
+        </EntityType>
+        <EntityType Name="NotificationLevel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameAr" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="NameEn" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Notifications" Relationship="HCM.WebApp.DAL.Entity.FK_Notification_NotificationLevel" FromRole="NotificationLevel" ToRole="Notification" />
+        </EntityType>
+        <EntityType Name="Rating">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaudiStudentAssociationId" Type="Int32" />
+          <Property Name="RatingValue" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="SaudiStudentAssociation" Relationship="HCM.WebApp.DAL.Entity.FK_Rating_SaudiStudentAssociation" FromRole="Rating" ToRole="SaudiStudentAssociation" />
+        </EntityType>
+        <EntityType Name="SaudiStudentAssociation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="UniversityId" Type="Int32" />
+          <Property Name="StateId" Type="Int32" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="ZipCode" Type="Int32" />
+          <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SocialInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdministratorId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="City" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_City" FromRole="SaudiStudentAssociation" ToRole="City" />
+          <NavigationProperty Name="FAQs" Relationship="HCM.WebApp.DAL.Entity.FK_FAQ_SaudiStudentAssociation" FromRole="SaudiStudentAssociation" ToRole="FAQ" />
+          <NavigationProperty Name="Ratings" Relationship="HCM.WebApp.DAL.Entity.FK_Rating_SaudiStudentAssociation" FromRole="SaudiStudentAssociation" ToRole="Rating" />
+          <NavigationProperty Name="ServiceInformations" Relationship="HCM.WebApp.DAL.Entity.FK_Information_SaudiStudentAssociation" FromRole="SaudiStudentAssociation" ToRole="ServiceInformation" />
+          <NavigationProperty Name="State" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_State" FromRole="SaudiStudentAssociation" ToRole="State" />
+          <NavigationProperty Name="University" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_University" FromRole="SaudiStudentAssociation" ToRole="University" />
+        </EntityType>
+        <EntityType Name="ServiceCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="ServiceInformations" Relationship="HCM.WebApp.DAL.Entity.FK_Information_InformationCategory" FromRole="ServiceCategory" ToRole="ServiceInformation" />
+        </EntityType>
+        <EntityType Name="ServiceDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceInformationId" Type="Int32" />
+          <Property Name="InfoTypeId" Type="Int32" />
+          <Property Name="InformationContent" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="FileExt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="InfoType" Relationship="HCM.WebApp.DAL.Entity.FK_ServiceDetails_InfoType" FromRole="ServiceDetail" ToRole="InfoType" />
+          <NavigationProperty Name="ServiceInformation" Relationship="HCM.WebApp.DAL.Entity.FK_InformationDetails_Information" FromRole="ServiceDetail" ToRole="ServiceInformation" />
+        </EntityType>
+        <EntityType Name="ServiceInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaudiStudentAssociationId" Type="Int32" />
+          <Property Name="ServiceCategoryId" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="SaudiStudentAssociation" Relationship="HCM.WebApp.DAL.Entity.FK_Information_SaudiStudentAssociation" FromRole="ServiceInformation" ToRole="SaudiStudentAssociation" />
+          <NavigationProperty Name="ServiceCategory" Relationship="HCM.WebApp.DAL.Entity.FK_Information_InformationCategory" FromRole="ServiceInformation" ToRole="ServiceCategory" />
+          <NavigationProperty Name="ServiceDetails" Relationship="HCM.WebApp.DAL.Entity.FK_InformationDetails_Information" FromRole="ServiceInformation" ToRole="ServiceDetail" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Abbr" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Cities" Relationship="HCM.WebApp.DAL.Entity.FK_City_State" FromRole="State" ToRole="City" />
+          <NavigationProperty Name="SaudiStudentAssociations" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_State" FromRole="State" ToRole="SaudiStudentAssociation" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="University">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="AspNetUsers" Relationship="HCM.WebApp.DAL.Entity.FK_AspNetUsers_University" FromRole="University" ToRole="AspNetUser" />
+          <NavigationProperty Name="SaudiStudentAssociations" Relationship="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_University" FromRole="University" ToRole="SaudiStudentAssociation" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameAr" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="NameEn" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="HCM.WebApp.DAL.Entity.FK_AspNetUsers_UserType" FromRole="UserType" ToRole="AspNetUser" />
+          <NavigationProperty Name="Notifications" Relationship="HCM.WebApp.DAL.Entity.FK_Notification_UserType" FromRole="UserType" ToRole="Notification" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUsers_University">
+          <End Type="HCM.WebApp.DAL.Entity.University" Role="University" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUser">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUsers_UserType">
+          <End Type="HCM.WebApp.DAL.Entity.UserType" Role="UserType" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUser">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Type="HCM.WebApp.DAL.Entity.State" Role="State" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.City" Role="City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_City">
+          <End Type="HCM.WebApp.DAL.Entity.City" Role="City" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FAQ_SaudiStudentAssociation">
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.FAQ" Role="FAQ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FAQ">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceDetails_InfoType">
+          <End Type="HCM.WebApp.DAL.Entity.InfoType" Role="InfoType" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.ServiceDetail" Role="ServiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InfoType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceDetail">
+              <PropertyRef Name="InfoTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Message_MessageType">
+          <End Type="HCM.WebApp.DAL.Entity.MessageType" Role="MessageType" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.Message" Role="Message" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MessageType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Message">
+              <PropertyRef Name="MessageTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_NotificationLevel">
+          <End Type="HCM.WebApp.DAL.Entity.NotificationLevel" Role="NotificationLevel" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.Notification" Role="Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NotificationLevel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="NotificationLevelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Notification_UserType">
+          <End Type="HCM.WebApp.DAL.Entity.UserType" Role="UserType" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.Notification" Role="Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Notification">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rating_SaudiStudentAssociation">
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.Rating" Role="Rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rating">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_SaudiStudentAssociation">
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.ServiceInformation" Role="ServiceInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SaudiStudentAssociation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceInformation">
+              <PropertyRef Name="SaudiStudentAssociationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_State">
+          <End Type="HCM.WebApp.DAL.Entity.State" Role="State" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SaudiStudentAssociation_University">
+          <End Type="HCM.WebApp.DAL.Entity.University" Role="University" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Role="SaudiStudentAssociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="University">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SaudiStudentAssociation">
+              <PropertyRef Name="UniversityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Information_InformationCategory">
+          <End Type="HCM.WebApp.DAL.Entity.ServiceCategory" Role="ServiceCategory" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.ServiceInformation" Role="ServiceInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceInformation">
+              <PropertyRef Name="ServiceCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InformationDetails_Information">
+          <End Type="HCM.WebApp.DAL.Entity.ServiceInformation" Role="ServiceInformation" Multiplicity="0..1" />
+          <End Type="HCM.WebApp.DAL.Entity.ServiceDetail" Role="ServiceDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceDetail">
+              <PropertyRef Name="ServiceInformationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="HCM.WebApp.DAL.Entity.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="HCM.WebApp.DAL.Entity.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HCMWebAppDALEntityStoreContainer" CdmEntityContainer="HajjCrawdsMngEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQs">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.FAQ">
+              <MappingFragment StoreEntitySet="FAQ">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="SaudiStudentAssociationId" ColumnName="SaudiStudentAssociationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InfoTypes">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.InfoType">
+              <MappingFragment StoreEntitySet="InfoType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+                <ScalarProperty Name="NameAr" ColumnName="NameAr" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Origin" ColumnName="Origin" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.Message">
+              <MappingFragment StoreEntitySet="Message">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SenderMobile" ColumnName="SenderMobile" />
+                <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+                <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+                <ScalarProperty Name="MessageTypeId" ColumnName="MessageTypeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MessageTypes">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.MessageType">
+              <MappingFragment StoreEntitySet="MessageType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notifications">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.Notification">
+              <MappingFragment StoreEntitySet="Notification">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="NotificationLevelId" ColumnName="NotificationLevelId" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NotificationLevels">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.NotificationLevel">
+              <MappingFragment StoreEntitySet="NotificationLevel">
+                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+                <ScalarProperty Name="NameAr" ColumnName="NameAr" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ratings">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.Rating">
+              <MappingFragment StoreEntitySet="Rating">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="RatingValue" ColumnName="RatingValue" />
+                <ScalarProperty Name="SaudiStudentAssociationId" ColumnName="SaudiStudentAssociationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaudiStudentAssociations">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.SaudiStudentAssociation">
+              <MappingFragment StoreEntitySet="SaudiStudentAssociation">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="AdministratorId" ColumnName="AdministratorId" />
+                <ScalarProperty Name="SocialInfo" ColumnName="SocialInfo" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+                <ScalarProperty Name="UniversityId" ColumnName="UniversityId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceCategories">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.ServiceCategory">
+              <MappingFragment StoreEntitySet="ServiceCategory">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceDetails">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.ServiceDetail">
+              <MappingFragment StoreEntitySet="ServiceDetails">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="FileExt" ColumnName="FileExt" />
+                <ScalarProperty Name="InformationContent" ColumnName="InformationContent" />
+                <ScalarProperty Name="InfoTypeId" ColumnName="InfoTypeId" />
+                <ScalarProperty Name="ServiceInformationId" ColumnName="ServiceInformationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceInformations">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.ServiceInformation">
+              <MappingFragment StoreEntitySet="ServiceInformation">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ServiceCategoryId" ColumnName="ServiceCategoryId" />
+                <ScalarProperty Name="SaudiStudentAssociationId" ColumnName="SaudiStudentAssociationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Abbr" ColumnName="Abbr" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Universities">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.University">
+              <MappingFragment StoreEntitySet="University">
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="HCM.WebApp.DAL.Entity.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="NameEn" ColumnName="NameEn" />
+                <ScalarProperty Name="NameAr" ColumnName="NameAr" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="HCM.WebApp.DAL.Entity.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

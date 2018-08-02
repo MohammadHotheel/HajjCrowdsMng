@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>عن الموقع</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>عن الموقع</value>
+  </data>
+  <data name="AboutUsDesc" xml:space="preserve">
+    <value>للمعلومات عن هذا الموقع والمشروع اضغط على زر عن الموقع</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>ليس لديك صلاحية للوصول لهذه الصفحة</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>الحسابات</value>
+  </data>
+  <data name="AccountMang" xml:space="preserve">
+    <value>إدارة الحسابات</value>
+  </data>
+  <data name="AccountNotActive" xml:space="preserve">
+    <value>الحساب غير مفعل! برجاء التواصل مع مدير الموقع لتفعيل حسابك</value>
+  </data>
+  <data name="AccountTitle" xml:space="preserve">
+    <value>تفعيل/ايقاف الحسابات</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="ActiveConfirm" xml:space="preserve">
+    <value>return confirm('هل انت متأكد من تفعيل/ايقاف الحساب?');</value>
+  </data>
+  <data name="ActiveError" xml:space="preserve">
+    <value>حدث خطأ اثناء تفعيل الحساب</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>إضافة عنصر جديد</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="AllCat" xml:space="preserve">
+    <value>-- جميع اصناف الخدمات --</value>
+  </data>
+  <data name="AllCity" xml:space="preserve">
+    <value>-- جميع المدن --</value>
+  </data>
+  <data name="AllState" xml:space="preserve">
+    <value>-- جميع الولايات --</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>الإجابة</value>
+  </data>
+  <data name="Associations" xml:space="preserve">
+    <value>الأندية الطلابية</value>
+  </data>
+  <data name="AssociationsDesc" xml:space="preserve">
+    <value>يمكنك البحث عن الأندية الطلابية السعودية عن طريق التصفية بحسب الولاية أو المدينة أو تصنيف الخدمات</value>
+  </data>
+  <data name="CantDelete" xml:space="preserve">
+    <value>لايمكن حذف هذا العنصر لارتباطه بمعلومات أخرى</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="CityMang" xml:space="preserve">
+    <value>إدارة المدن</value>
+  </data>
+  <data name="CityTitle" xml:space="preserve">
+    <value>قائمة المدن</value>
+  </data>
+  <data name="classfloatX" xml:space="preserve">
+    <value>navbar-nav mr-auto navbar-left</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm('هل أنت متأكد من حذف هذا العنصر?');</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>الأسئلة المتكررة</value>
+  </data>
+  <data name="FAQMang" xml:space="preserve">
+    <value>إدارة الأسئلة المتكررة</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>الأسئلة المتكررة</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>الفاكس</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>الملفات</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
+  <data name="GrantPermission" xml:space="preserve">
+    <value>منح هذا الحساب صلاحيات المشرف</value>
+  </data>
+  <data name="GrantPermissionConfirm" xml:space="preserve">
+    <value>return confirm('هل أنت متأكد من منح هذا الحساب الصلاحيات t?');</value>
+  </data>
+  <data name="HavePermmisions" xml:space="preserve">
+    <value>لديه صلاحيات</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>مرحبا</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>الصور</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="InformationContent" xml:space="preserve">
+    <value>محتوى المعلومات</value>
+  </data>
+  <data name="InfoType" xml:space="preserve">
+    <value>نوع المعلومات</value>
+  </data>
+  <data name="LanguagePage" xml:space="preserve">
+    <value>ChangeLanguage.aspx?lang=en</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>الرابط</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>الروابط</value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>ايقاف</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>الجوال</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>الرسالة</value>
+  </data>
+  <data name="MsgTitle" xml:space="preserve">
+    <value>مراسلة ادارة الموقع</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>التنقل</value>
+  </data>
+  <data name="NavigationDesc" xml:space="preserve">
+    <value>يمكنك التنقل بسهولة عبر الخارطة للنادي الطلابي السعودي</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لا يوجد بيانات ....</value>
+  </data>
+  <data name="NotActive" xml:space="preserve">
+    <value>غير مفعل</value>
+  </data>
+  <data name="NotHavePermmisions" xml:space="preserve">
+    <value>ليس لديع صلاحيات</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>مفتوح</value>
+  </data>
+  <data name="OperationError" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية {0}!</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>تمت عملية {0} بنجاح</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="Permmisions" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>ملف البيانات</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>السؤال</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>التسجيل</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>انشاء حساب جديد</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>رجوع</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="SearchDesc" xml:space="preserve">
+    <value>يمكنك البحث بسهولة عن أي نادي طلابي سعودي عن طريق كتابة كلمة البحث</value>
+    <comment>You can easily find any Saudi Student Association by the search of any word in content</comment>
+  </data>
+  <data name="Section" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>اختيار عنصر</value>
+  </data>
+  <data name="SelectCat" xml:space="preserve">
+    <value>اختيار تصنيف:</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>اختيار مدينة:</value>
+  </data>
+  <data name="SelectState" xml:space="preserve">
+    <value>اختيار ولاية:</value>
+  </data>
+  <data name="ServiceCategory" xml:space="preserve">
+    <value>تصنيف الخدمات</value>
+  </data>
+  <data name="ServiceCategoryMang" xml:space="preserve">
+    <value>ادارة تصنيف الخدمات</value>
+  </data>
+  <data name="ServiceCategoryTitle" xml:space="preserve">
+    <value>قائمة تصنيف الخدمات</value>
+  </data>
+  <data name="ServiceDetails" xml:space="preserve">
+    <value>تفاصيل الخدمة</value>
+  </data>
+  <data name="ServiceDetailsCount" xml:space="preserve">
+    <value>عدد تفاصيل الخدمة</value>
+  </data>
+  <data name="ServiceDetailsMang" xml:space="preserve">
+    <value>ادارة معلومات الخدمات</value>
+  </data>
+  <data name="ServiceInfo" xml:space="preserve">
+    <value>معلومات الخدمات</value>
+  </data>
+  <data name="ServiceInfoMang" xml:space="preserve">
+    <value>ادارة معلومات الخدمات</value>
+  </data>
+  <data name="ServiceInfoTitle" xml:space="preserve">
+    <value>قائمة معلومات الخدمات</value>
+  </data>
+  <data name="SocialInfo" xml:space="preserve">
+    <value>معلومات السوشيال ميديا</value>
+  </data>
+  <data name="SSA" xml:space="preserve">
+    <value>نادي الطلاب السعودي</value>
+  </data>
+  <data name="SSAC" xml:space="preserve">
+    <value>البوابة المركزية لأندية الطلاب السعوديين</value>
+  </data>
+  <data name="SSACP" xml:space="preserve">
+    <value>البوابة المركزية لأندية الطلاب السعوديين</value>
+  </data>
+  <data name="SSACPDesc" xml:space="preserve">
+    <value>البوابة المركزية لجميع الأندية الطلابية السعودية في الولايات المتحدة الأمريكية</value>
+  </data>
+  <data name="SSAInfo" xml:space="preserve">
+    <value>معلومات نادي الطلاب السعودي</value>
+  </data>
+  <data name="SSAList" xml:space="preserve">
+    <value>قائمة الأندية الطلابية السعودية</value>
+  </data>
+  <data name="SSALogo" xml:space="preserve">
+    <value>SSA</value>
+  </data>
+  <data name="SSAMang" xml:space="preserve">
+    <value>إدارة الأندية</value>
+  </data>
+  <data name="SSAProfile" xml:space="preserve">
+    <value>ملف بيانات نادي الطلاب السعودي</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>الولاية</value>
+  </data>
+  <data name="StateMang" xml:space="preserve">
+    <value>ادارة الولايات</value>
+  </data>
+  <data name="StateTitle" xml:space="preserve">
+    <value>قائمة الولايات</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>الشارع</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="University" xml:space="preserve">
+    <value>الجامعة</value>
+  </data>
+  <data name="UniversityMang" xml:space="preserve">
+    <value>ادارة الجامعات</value>
+  </data>
+  <data name="UniversityTitle" xml:space="preserve">
+    <value>قائمة الجامعات</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="UpdateExisting" xml:space="preserve">
+    <value>تعديل عنصر موجود</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>نوع المستخدم</value>
+  </data>
+  <data name="validateCompareInteger" xml:space="preserve">
+    <value>قيمة رقمية فقط!</value>
+  </data>
+  <data name="validateConfirmation" xml:space="preserve">
+    <value>كلمة المرور وتاكيد كلمة المرور غير متطابق!</value>
+  </data>
+  <data name="validateRequiredField" xml:space="preserve">
+    <value>هذا الحقل الزامي!</value>
+  </data>
+  <data name="ValidateUrlRegularExpression" xml:space="preserve">
+    <value>خطأ في صيغة الرابط المدخل</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>الموقع الالكتروني</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>الرمز البريدي</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>استخدم حسابك لتسجيل الدخول</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>تسجيل مستخدم جديد</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكيري؟</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>[تغيير]</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="ChangePasswordForm" xml:space="preserve">
+    <value>نموذج تغيير كلمة المرور</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور الجديدة</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>[إنشاء]</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>كلمة المرور الحالية</value>
+  </data>
+  <data name="ManageAccount" xml:space="preserve">
+    <value>إدارة الحساب</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>تغيير اعدادات الحساب</value>
+  </data>
+  <data name="ManagePassword" xml:space="preserve">
+    <value>ادارة كلمة المرور</value>
+  </data>
+  <data name="ManagePasswordP" xml:space="preserve">
+    <value>You do not have a local password for this site. Add a local password so you can log in without an external login.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>اعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="SetPasswordForm" xml:space="preserve">
+    <value>نموذج اعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="addUni" xml:space="preserve">
+    <value>اذا كنت لا تجد جامعتك، برجاء التواصل مع مدير الموقع وارسال اسم الجامعة ليتم اضافتها في القائمة</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>رسالة</value>
+  </data>
+  <data name="MessageType" xml:space="preserve">
+    <value>نوع الرسالة</value>
+  </data>
+  <data name="RegisterDesc" xml:space="preserve">
+    <value>لاضافة نادي طلاب سعودي لجامعتك اضغط على زر تسجيل</value>
+  </data>
+  <data name="RegisterFor" xml:space="preserve">
+    <value>التسجيل في هذا الموقع فقط للمشرفين على الأندية الطلابية السعودية في جامعات الولايات المتحدة الأمريكية</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="SendMsg" xml:space="preserve">
+    <value>ارسال رسالة</value>
+  </data>
+  <data name="SSAHomeList" xml:space="preserve">
+    <value>قائمة الأندية الطلابية السعودية</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="CloseConfirm" xml:space="preserve">
+    <value>return confirm('هل أنت متأكد من إغلاق الرسالة?');</value>
+  </data>
+  <data name="FollowUpMessage" xml:space="preserve">
+    <value>متابعة الرسائل</value>
+  </data>
+  <data name="FollowUpMessageTitle" xml:space="preserve">
+    <value>متابعة الرسائل</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>الرسائل</value>
+  </data>
+  <data name="AssCount" xml:space="preserve">
+    <value>عدد الأندية الطلابية</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>الاحصائيات</value>
+  </data>
+  <data name="SvcInfoCount" xml:space="preserve">
+    <value>عدد الخدمات</value>
+  </data>
+  <data name="LockDate" xml:space="preserve">
+    <value>تاريخ الايقاف</value>
+  </data>
+  <data name="cssBootstrap" xml:space="preserve">
+    <value>~/Content/bootstrapFlatly.rtl.css</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>اذهب</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>الإجراء</value>
+  </data>
+  <data name="LastUpdatedDate" xml:space="preserve">
+    <value>تاريخ آخر تحديث</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>الإشعار</value>
+  </data>
+  <data name="NotificationMang" xml:space="preserve">
+    <value>إدارة الإشعارات</value>
+  </data>
+  <data name="CP" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+</root>

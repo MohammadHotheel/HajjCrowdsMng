@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e77c81e7514d41ca998b50e66601eb18" Name="Diagram1">
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.C__MigrationHistory" Width="1.5" PointX="9.75" PointY="12" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.AspNetRole" Width="1.5" PointX="8" PointY="20.5" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.AspNetUserClaim" Width="1.5" PointX="12.5" PointY="15.25" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.AspNetUserLogin" Width="1.5" PointX="12.5" PointY="12.625" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.AspNetUser" Width="1.5" PointX="10.25" PointY="0.75" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.City" Width="1.5" PointX="3" PointY="9.875" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.FAQ" Width="1.5" PointX="7.5" PointY="13.25" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.InfoType" Width="1.5" PointX="7.5" PointY="4.625" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.Location" Width="1.5" PointX="9.75" PointY="15" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.Log" Width="1.5" PointX="11.75" PointY="7" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.Message" Width="1.5" PointX="3" PointY="15.25" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.MessageType" Width="1.5" PointX="0.75" PointY="16.25" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.Notification" Width="1.5" PointX="10.25" PointY="21.875" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.NotificationLevel" Width="1.5" PointX="8" PointY="25.875" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.Rating" Width="1.5" PointX="7.5" PointY="16.875" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.SaudiStudentAssociation" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.ServiceCategory" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.ServiceDetail" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.ServiceInformation" Width="1.5" PointX="7.5" PointY="7.25" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.State" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.sysdiagram" Width="1.5" PointX="13.75" PointY="5" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.University" Width="1.5" PointX="3" PointY="6" />
+        <EntityTypeShape EntityType="HCM.WebApp.DAL.Entity.UserType" Width="1.5" PointX="8" PointY="22.875" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_AspNetUsers_University" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_AspNetUsers_UserType" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_City_State" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_City" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_FAQ_SaudiStudentAssociation" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_ServiceDetails_InfoType" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Message_MessageType" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Notification_NotificationLevel" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Notification_UserType" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Rating_SaudiStudentAssociation" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Information_SaudiStudentAssociation" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_State" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_SaudiStudentAssociation_University" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_Information_InformationCategory" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.FK_InformationDetails_Information" />
+        <AssociationConnector Association="HCM.WebApp.DAL.Entity.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

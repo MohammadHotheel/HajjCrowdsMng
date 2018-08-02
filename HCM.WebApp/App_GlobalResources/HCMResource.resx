@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutUsDesc" xml:space="preserve">
+    <value>For more information about this website, click on About Us button</value>
+  </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>You don't have permissions to access this page</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Accounts</value>
+  </data>
+  <data name="AccountMang" xml:space="preserve">
+    <value>Accounts Management</value>
+  </data>
+  <data name="AccountNotActive" xml:space="preserve">
+    <value>Account Not Active! please contact with the administrator to activate your account</value>
+  </data>
+  <data name="AccountTitle" xml:space="preserve">
+    <value>Activate/Lock the account</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ActiveConfirm" xml:space="preserve">
+    <value>return confirm('Are you sure to activate/lock this account?');</value>
+  </data>
+  <data name="ActiveError" xml:space="preserve">
+    <value>An error occurred during activation!</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add a new item</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllCat" xml:space="preserve">
+    <value>-- All Service Category --</value>
+  </data>
+  <data name="AllCity" xml:space="preserve">
+    <value>-- All Cites --</value>
+  </data>
+  <data name="AllState" xml:space="preserve">
+    <value>-- All States --</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Associations" xml:space="preserve">
+    <value>Associations</value>
+  </data>
+  <data name="AssociationsDesc" xml:space="preserve">
+    <value>You can easily find a Saudi Student Association by using the filter of state, city, and service category.</value>
+  </data>
+  <data name="CantDelete" xml:space="preserve">
+    <value>Can't Delete this item because of its relationship another information</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CityMang" xml:space="preserve">
+    <value>Cities Management</value>
+  </data>
+  <data name="CityTitle" xml:space="preserve">
+    <value>List of Cities</value>
+  </data>
+  <data name="classfloatX" xml:space="preserve">
+    <value>navbar-nav mr-auto navbar-right</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>return confirm('Are you sure to delete this item?');</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="FAQMang" xml:space="preserve">
+    <value>FAQ Management</value>
+  </data>
+  <data name="FAQTitle" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="GrantPermission" xml:space="preserve">
+    <value>Grant this account supervisor permission</value>
+  </data>
+  <data name="GrantPermissionConfirm" xml:space="preserve">
+    <value>return confirm('Are you sure to grant permission to this account?');</value>
+  </data>
+  <data name="HavePermmisions" xml:space="preserve">
+    <value>Have Permmisions</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="InformationContent" xml:space="preserve">
+    <value>Information Content</value>
+  </data>
+  <data name="InfoType" xml:space="preserve">
+    <value>Information Type</value>
+  </data>
+  <data name="LanguagePage" xml:space="preserve">
+    <value>ChangeLanguage.aspx?lang=ar</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>عربي</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="Msg" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MsgTitle" xml:space="preserve">
+    <value>Administrative Message</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="NavigationDesc" xml:space="preserve">
+    <value>You can easily navigation on the map to find the Saudi Student Association</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>No Data ....</value>
+  </data>
+  <data name="NotActive" xml:space="preserve">
+    <value>Not Active</value>
+  </data>
+  <data name="NotHavePermmisions" xml:space="preserve">
+    <value>Not Have Permmisions</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OperationError" xml:space="preserve">
+    <value>An error occurred during the {0} process!</value>
+  </data>
+  <data name="OperationSuccess" xml:space="preserve">
+    <value>The {0} process has been completed successfully</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Permmisions" xml:space="preserve">
+    <value>Permmisions</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Create a new account</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchDesc" xml:space="preserve">
+    <value>You can easily find any Saudi Student Association by searching for any word in content.</value>
+  </data>
+  <data name="Section" xml:space="preserve">
+    <value>County</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select Item</value>
+  </data>
+  <data name="SelectCat" xml:space="preserve">
+    <value>Select Service Category:</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Select City: </value>
+  </data>
+  <data name="SelectState" xml:space="preserve">
+    <value>Select State: </value>
+  </data>
+  <data name="ServiceCategory" xml:space="preserve">
+    <value>Service Category</value>
+  </data>
+  <data name="ServiceCategoryMang" xml:space="preserve">
+    <value>Service Categories Management</value>
+  </data>
+  <data name="ServiceCategoryTitle" xml:space="preserve">
+    <value>List of Service Categories</value>
+  </data>
+  <data name="ServiceDetails" xml:space="preserve">
+    <value>Service Details</value>
+  </data>
+  <data name="ServiceDetailsCount" xml:space="preserve">
+    <value>Service Details Count</value>
+  </data>
+  <data name="ServiceDetailsMang" xml:space="preserve">
+    <value>Service Details Management</value>
+  </data>
+  <data name="ServiceInfo" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="ServiceInfoMang" xml:space="preserve">
+    <value>Services Management</value>
+  </data>
+  <data name="ServiceInfoTitle" xml:space="preserve">
+    <value>List of Services</value>
+  </data>
+  <data name="SocialInfo" xml:space="preserve">
+    <value>SocialInfo</value>
+  </data>
+  <data name="SSA" xml:space="preserve">
+    <value>Saudi Student Association</value>
+  </data>
+  <data name="SSAC" xml:space="preserve">
+    <value>Saudi Student Association Central Portal</value>
+  </data>
+  <data name="SSACP" xml:space="preserve">
+    <value>Saudi Student Associations Central Portal</value>
+  </data>
+  <data name="SSACPDesc" xml:space="preserve">
+    <value>This is a centralized portal for all Saudi Student Associations in the U.S. universities</value>
+  </data>
+  <data name="SSAInfo" xml:space="preserve">
+    <value>Saudi Student Association Information</value>
+  </data>
+  <data name="SSAList" xml:space="preserve">
+    <value>Saudi Student Associations List</value>
+  </data>
+  <data name="SSALogo" xml:space="preserve">
+    <value>SSA</value>
+  </data>
+  <data name="SSAMang" xml:space="preserve">
+    <value>Associations Management</value>
+  </data>
+  <data name="SSAProfile" xml:space="preserve">
+    <value>Saudi Student Association Profile</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StateMang" xml:space="preserve">
+    <value>States Management</value>
+  </data>
+  <data name="StateTitle" xml:space="preserve">
+    <value>List of States</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="University" xml:space="preserve">
+    <value>University</value>
+  </data>
+  <data name="UniversityMang" xml:space="preserve">
+    <value>Universities Management</value>
+  </data>
+  <data name="UniversityTitle" xml:space="preserve">
+    <value>List of Universities</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateExisting" xml:space="preserve">
+    <value>Update an existing item</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>User Type</value>
+  </data>
+  <data name="validateCompareInteger" xml:space="preserve">
+    <value>Numeric Value Only !</value>
+  </data>
+  <data name="validateConfirmation" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+  </data>
+  <data name="validateRequiredField" xml:space="preserve">
+    <value>This field is required!</value>
+  </data>
+  <data name="ValidateUrlRegularExpression" xml:space="preserve">
+    <value>Error Regular Expression of Url</value>
+  </data>
+  <data name="Website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="ZipCode" xml:space="preserve">
+    <value>ZipCode</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Use a local account to log in</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>[Change]</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangePasswordForm" xml:space="preserve">
+    <value>Change Password Form</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>[Create]</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="ManageAccount" xml:space="preserve">
+    <value>Manage Account</value>
+  </data>
+  <data name="ManageAccountTitle" xml:space="preserve">
+    <value>Change your account settings</value>
+  </data>
+  <data name="ManagePassword" xml:space="preserve">
+    <value>Manage Password</value>
+  </data>
+  <data name="ManagePasswordP" xml:space="preserve">
+    <value>You do not have a local password for this site. Add a local password so you can log in without an external login.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>Set Password</value>
+  </data>
+  <data name="SetPasswordForm" xml:space="preserve">
+    <value>Set Password Form</value>
+  </data>
+  <data name="addUni" xml:space="preserve">
+    <value>If you don't find your university, contact the administrator and send your university name to add it to list</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageType" xml:space="preserve">
+    <value>Message Type</value>
+  </data>
+  <data name="RegisterDesc" xml:space="preserve">
+    <value>To add the Saudi Student Association of your university, click on Register button</value>
+  </data>
+  <data name="RegisterFor" xml:space="preserve">
+    <value>The Registration for this website is only for the Supervisor of the Saudi Student Association in the U.S. universities.</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendMsg" xml:space="preserve">
+    <value>Send message</value>
+  </data>
+  <data name="SSAHomeList" xml:space="preserve">
+    <value>SSA List</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseConfirm" xml:space="preserve">
+    <value>return confirm('Are you sure to close this message?');</value>
+  </data>
+  <data name="FollowUpMessage" xml:space="preserve">
+    <value> Messages</value>
+  </data>
+  <data name="FollowUpMessageTitle" xml:space="preserve">
+    <value>FollowUp Messages</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="AssCount" xml:space="preserve">
+    <value>Associations Count</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="SvcInfoCount" xml:space="preserve">
+    <value>Services Count</value>
+  </data>
+  <data name="LockDate" xml:space="preserve">
+    <value>Lock Date</value>
+  </data>
+  <data name="cssBootstrap" xml:space="preserve">
+    <value>~/Content/bootstrapFlatly.css</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>Go </value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="LastUpdatedDate" xml:space="preserve">
+    <value>Last Updated Date</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="NotificationLevel" xml:space="preserve">
+    <value>Notification Level</value>
+  </data>
+  <data name="NotificationMang" xml:space="preserve">
+    <value>Notification Management</value>
+  </data>
+  <data name="CP" xml:space="preserve">
+    <value>Control Panel</value>
+  </data>
+</root>
